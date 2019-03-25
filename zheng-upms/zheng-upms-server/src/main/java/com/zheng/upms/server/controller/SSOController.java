@@ -84,6 +84,7 @@ public class SSOController extends BaseController {
     @ApiOperation(value = "登录")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(HttpServletRequest request) {
+
         Subject subject = SecurityUtils.getSubject();
         Session session = subject.getSession();
         String serverSessionId = session.getId().toString();
